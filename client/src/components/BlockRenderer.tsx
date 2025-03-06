@@ -17,3 +17,4 @@ function blockRenderer(block: Block, index: number) {
 export function BlockRenderer({ blocks }: { blocks: Block[] }) {
   return blocks.map((block, index) => blockRenderer(block, index));
 }
+// test
