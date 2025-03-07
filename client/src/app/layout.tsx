@@ -1,3 +1,4 @@
+import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { getGlobalSettings } from "@/data/loaders";
 import type { Metadata } from "next";
@@ -31,13 +32,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { header } = await loader();
+  const { header, footer } = await loader();
+  console.log("footer: " + footer);
 
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header data={header} />
         {children}
+        <Footer data={footer} />
       </body>
     </html>
   );
