@@ -1,7 +1,6 @@
 .content-items {
   margin-bottom: 12rem;
 
-
   &__container {
     display: grid;
 
@@ -15,7 +14,6 @@
       }
     }
   }
-
 
   &__headline {
     margin-bottom: 6rem;
@@ -56,6 +54,11 @@
 
     & h5 {
       margin-bottom: 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     & p {
